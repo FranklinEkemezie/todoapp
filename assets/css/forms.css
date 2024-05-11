@@ -1,0 +1,185 @@
+@import url("default.css");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../imgs/space_img.png") no-repeat;
+  background-position: left;
+  background-size: cover;
+
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+}
+main {
+  width: 100%;
+  max-width: 400px;
+
+  min-height: 300px;
+  border: 1px solid var(--theme-border-colour);
+  box-shadow: var(--theme-shadow-1);
+  border-radius: .4rem;
+  background-color: rgba(245, 245, 245, 0.4);
+
+  padding: 1.2rem 0;
+}
+@media screen and (max-width: 728px) {
+  main {
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+main #heading {
+  padding: .4rem 0;
+  text-align: center;
+}
+main #heading .title {
+  margin: .8rem 0;
+}
+main #heading h1 {
+  text-transform: uppercase;
+  font-family: 'Rubik';
+}
+main #heading p {
+  font-size: 1.2rem;
+  color: var(--colour-dark-grey-1);
+}
+main #form-section {
+  padding: .4rem .8rem;
+  margin: .4rem 0;
+  margin-top: 0;
+}
+main #form-section .error-msg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--theme-error);
+  margin: .4rem 0;
+  color: var(--colour-white);
+  padding: .8rem;
+  font-family: 'Rubik';
+  border-radius: 2px;
+  opacity: .75;
+  cursor: pointer;
+  user-select: none;
+}
+main #form-section .error-msg.hidden {
+  display: none;
+}
+main #form-section .error-msg p {
+  color: var(--colour-white);
+  font-size: .96rem;
+  font-family: 'Rubik';
+}
+
+main #form-section .form-field {
+  position: relative;
+  border: 1px solid var(--theme-border-colour);
+  background-color: var(--colour-light-grey-1);
+  margin: 1rem 0;
+  padding: 0;
+  border-radius: 2px;
+  padding: 0 .4rem;
+  padding-left: 2rem;
+}
+main #form-section .form-field:last-child {
+  margin-bottom: 0;
+}
+main #form-section .form-field .icon {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(50%, -50%);
+  color: var(--colour-dark-grey-1);
+}
+main #form-section .form-field input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: .96rem;
+  font-family: 'Rubik';
+  padding: 0;
+  margin: 1rem 0;
+  color: var(--theme-text-colour);
+
+}
+/* The label in normal state */
+main #form-section .form-field label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: .96rem;
+  font-family: 'Rubik';
+  color: rgba(0, 0, 0, 0.75);
+  transition: .2s ease-in-out;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: text;
+  user-select: none;
+}
+/* Return in the elevated and minimized form */
+/* When the input is focused,  */
+main #form-section .form-field input:not(:placeholder-shown) + label {
+  font-size: .75rem;
+  top: .125rem;
+  transform: translateY(0);
+  cursor: initial;
+}
+main #form-section .form-field .info {
+  position: absolute;
+  bottom: 0%;
+  right: .4rem;
+  color: var(--theme-error);
+  font-size: .75rem;
+}
+main #form-section #toggle-password {
+  background: none;
+  border: none;
+  font-size: .8rem;
+  color: var(--theme-text-colour-1);
+}
+main #form-section label[for="toggle-password"] {
+  font-size: .8rem;
+}
+main #form-section .extras {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .8rem;
+  margin-top: .4rem;
+}
+main #form-section .extras .forgot-password a.link {
+  color: var(--theme-primary) !important;
+}
+main #form-section .submit-field {
+  margin-top: 1.6rem;
+}
+main #form-section .submit-field p {
+  text-align: center;
+  font-size: .8rem;
+  color: var(--theme-text-colour-1);
+  margin: .4rem 0;
+}
+main #form-section .submit-field a {
+  color: var(--theme-primary);
+}
+main #form-section .submit-field button {
+  width: 100%;  
+  background-color: var(--theme-button-colour);
+  border: none;
+  outline: none;
+  color: var(--colour-white);
+  padding: .64rem .8rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: .2rem;
+  transition: .4s;
+}
+main #form-section .submit-field button:hover {
+  box-shadow: var(--theme-shadow-1);
+  background-color: var(--theme-button-hover-colour);
+}

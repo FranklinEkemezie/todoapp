@@ -1,0 +1,5 @@
+@import url("forms.css");
+
+main #heading .error-msg.hidden {
+  display: none;
+}

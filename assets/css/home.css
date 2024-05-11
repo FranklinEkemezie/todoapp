@@ -1,0 +1,174 @@
+@import url("default.css");
+
+body {
+  display: flex;
+  --side-bar-width: 240px;
+}
+body > #side-bar {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: var(--side-bar-width);
+  height: 100%;
+}
+body > #content {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: calc(100% - var(--side-bar-width));
+  height: 100%;
+}
+
+/* -----------------------------
+# Heading
+------------------------------ */
+header {
+  position: sticky;
+  width: 100%;
+}
+header .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.008);
+  padding: 1.2rem;
+}
+header .subtitle {
+  padding: .4rem 1.2rem;
+}
+header .subtitle form#search-form {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 1.2rem;
+}
+header .subtitle form#search-form .search-field {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.205);
+  padding: .1rem;
+
+  width: 100%;
+  max-width: 480px;
+  padding: .2rem;
+}
+header .subtitle form#search-form .search-field label {
+  margin-left: .2rem;
+  margin-right: .4rem;
+}
+header .subtitle form#search-form .search-field label .search-icon {
+  color: rgba(0, 0, 0, 0.4);
+}
+header .subtitle form#search-form .search-field input[type="search"] {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: .1rem;
+  font-family: 'Rubik';
+  width: 100%;
+}
+header .subtitle form#search-form button[type="submit"] {
+  padding: .4rem 1.2rem;
+  background-color: rgb(63, 63, 221);
+  color: whitesmoke;
+  border: none;
+  outline: none;
+  border-radius: 1px;
+  margin-left: .4rem;
+  font-family: 'Rubik';
+  font-size: 16px;
+  transition: background-color .4s;
+  cursor: pointer;
+}
+header .subtitle form#search-form button[type="submit"]:hover {
+  background-color: hsl(240, 74%, 49%);
+}
+header .subtitle .divider {
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------------------
+# Side bar
+------------------------------- */
+body #side-bar {
+
+}
+
+/* ----------------------------------
+# Main
+-------------------------------- */
+main section {
+  /* border: 1px solid blue; */
+  border: 1px solid #ddd;
+  background-color: rgba(221, 221, 221, 0.2);
+  border-radius: .4rem;
+
+  padding: 3.2rem 2.4rem;
+  margin: 3.2rem;
+}
+main section:first-child {
+  margin: 1.2rem 3.2rem;
+}
+main section .heading {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+main section .heading h3 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.98);
+  font-family: 'Rubik';
+
+}
+main section .heading h6 {
+  font-weight: 400;
+  font-size: .8rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+main section .heading button {
+  background-color: rgb(52, 52, 197);
+  color: whitesmoke;
+  border: none;
+  outline: none;
+  padding: .64rem 1.2rem;
+  border-radius: .4rem;
+  font-size: .96rem;
+  font-family: 'Rubik';
+}
+main section .tasks-list-container {
+  margin: 1.2rem 0;
+}
+/* Task list table */
+main section .tasks-list-container table#tasks-list {
+  width: 100%;
+  border-collapse: collapse;
+  --width: 40px;
+
+  color: rgba(0, 0, 0, 0.75);
+}
+
+main section .tasks-list-container table#tasks-list tr {
+  padding: 1.2rem 0;
+  transition: .4s;
+}
+main section .tasks-list-container table#tasks-list tr:hover {
+  background-color: rgba(230, 230, 230, 0.4);
+}
+main section .tasks-list-container table#tasks-list tr .icon {
+  color: rgba(0, 0, 0, 0.75);
+}
+main section .tasks-list-container table#tasks-list tr td {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding: .64rem .8rem;
+
+  width: var(--width);
+}
+main section .tasks-list-container table#tasks-list tr td:nth-child(2) {  
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 0;
+  width: 100%;
+  /* border: 1px solid; */
+}

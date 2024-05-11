@@ -1,0 +1,14 @@
+@import url("forms.css");
+
+main #heading h1 {
+  text-transform: capitalize;
+  line-height: 1.08;
+  font-size: 36px;
+}
+main #form-section .submit-btn-container {
+  text-align: right;
+}
+main #form-section .submit-field button {
+  width: fit-content;
+  padding: .64rem 1.2rem;
+}

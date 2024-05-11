@@ -1,0 +1,98 @@
+body {
+}
+main {
+  display: flex;
+  align-items: flex-start;
+  
+}
+main > #sidebar-content {
+  position: fixed;
+  left: -280px;
+}
+@media screen and (min-width: 992px) {
+  main > #sidebar-content {
+    width: 280px;
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+
+    left: 0;
+  }
+}
+main #sidebar-content .settings-options .list-group-item {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+  color: var(--theme-text-colour-1);
+  transition: .08s ease-in-out;
+  font-size: .9rem;
+}
+main #sidebar-content .settings-options .list-group-item.active {
+  background-color: var(--theme-primary);
+  border: none;
+  border-left: 2px solid rgba(0, 0, 0, 0.4) ;
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: .98rem;
+}
+main #sidebar-content .settings-options .list-group-item.active:hover {
+  border-right: 2px solid var(--theme-primary);
+}
+main #sidebar-content .settings-options .list-group-item .fa {
+  width: 24px;
+}
+main #main-content {
+  position: relative;
+  width: 100%; 
+  overflow-x: auto;
+}
+/* On larger devices */
+@media screen and (min-width: 992px) {
+  main > #main-content {
+    width: calc(100% - 280px);
+    margin-left: 280px;
+  }
+}
+main #main-content #settings-tab-content-container {
+  width: 100vw;
+}
+@media screen and (min-width: 992px) {
+  main #main-content #settings-tab-content-container {
+    width: 100%;
+  }
+}
+/* -------------------------
+PROFILE SECTION
+------------------------- */
+main #profile .profile-banner {
+  background-color: var(--theme-primary);
+}
+main #profile .user-info ul li label {
+  width: 120px;
+}
+main #profile .user-info .edit-profile-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* Avatar display grid */
+.avatar-display-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: .8rem;
+}
+.avatar-display-grid > div {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: .08s ease;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.avatar-display-grid > div:hover {
+  outline: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.075);
+  box-shadow: .4rem .4rem 8px rgba(0, 0, 0, 0.04),
+  -.4rem -.4rem 8px rgba(0, 0, 0, 0.04)
+}
+.avatar-display-grid > div > button:focus {
+  outline: 4px solid var(--bs-primary);
+}
+.avatar-display-grid > div img {
+  display: block;
+  margin: 0 auto;
+}

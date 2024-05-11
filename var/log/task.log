@@ -1,0 +1,22 @@
+[Wed Mar 6 23:47:55 2024] todoapp.ERROR An error occurred creating task for mena@ted.com 
+[Wed Mar 6 23:48:40 2024] todoapp.ERROR An error occurred creating task for mena@ted.com 
+[Wed Mar 6 23:50:57 2024] todoapp.ERROR An error occurred creating task for mena@ted.com 
+[Wed Mar 6 23:51:30 2024] todoapp.ERROR An error occurred creating task for mena@ted.com 
+[Wed Mar 6 23:52:16 2024] todoapp.INFO Task 503bfe9b64384 created successfully @mena@ted.com 
+[Thu Mar 7 19:49:54 2024] todoapp.INFO Task 76ccba64048ac created successfully @philip_@okonkwo.pe 
+[Sun Mar 10 21:37:27 2024] todoapp.INFO Task 58227870af7e1 created successfully @john@doe.com 
+[Mon Mar 18 8:38:18 2024] todoapp.INFO Task 5bb272782d472 created successfully @john@doe.com 
+[Tue Mar 19 20:15:28 2024] todoapp.INFO Task cdcfe00ac82d8 created successfully @john@doe.com 
+[Tue Mar 19 20:41:31 2024] todoapp.INFO Task d69653e278180 created successfully @john@doe.com 
+[Wed Mar 20 14:43:13 2024] todoapp.INFO Task 573a364b95198 created successfully @philip_@okonkwo.pe 
+[Wed Mar 20 14:46:09 2024] todoapp.INFO Task 4cab6f92f6339 created successfully @philip_@okonkwo.pe 
+[Tue Apr 2 22:32:22 2024] todoapp.INFO Task 7f4df378cdbef created successfully for @john@doe.com 
+[Fri Apr 5 19:59:32 2024] todoapp.INFO Task e28409b42f1b4 created successfully for @john@doe.com 
+[Tue Apr 9 16:17:28 2024] todoapp.INFO Task bf359cc2755d2 created successfully for @john@doe.com 
+[Fri Apr 12 18:30:19 2024] todoapp.WARNING An error occurred while editing the task (bf359cc2755d2): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE task_id = 'bf359cc2755d2'' at line 3 
+[Fri Apr 12 21:51:49 2024] todoapp.INFO Task 967eaf7dcc42b created successfully for @precious@jane.com 
+[Sat Apr 13 1:07:46 2024] todoapp.WARNING An error occurred while editing the task (58227870af7e1): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE task_id = '58227870af7e1'' at line 3 
+[Sat Apr 13 22:29:30 2024] todoapp.WARNING An error occurred while editing the task (null): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE task_id = 'null'' at line 3 
+[Sat Apr 13 22:47:33 2024] todoapp.WARNING An error occurred while editing the task (31e82af0f43bd): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE task_id = '31e82af0f43bd'' at line 3 
+[Mon Apr 29 9:10:44 2024] todoapp.ERROR An error occurred creating task for franklynpeter2006@gmail.com 
+[Mon Apr 29 9:20:18 2024] todoapp.INFO Task 6c1f581e900cc created successfully for @franklynpeter2006@gmail.com 

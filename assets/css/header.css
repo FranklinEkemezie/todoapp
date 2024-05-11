@@ -1,0 +1,44 @@
+@import url("default.css");
+
+body {
+  position: relative;
+}
+header {
+  position: sticky !important;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+
+  height: 64px;
+}
+/* Remove dropdown icon for user profile dropdown */
+header #profile-dropdown .dropdown-toggle::after {
+  display: none !important;
+}
+/* Styling user profile dropdown */
+header #profile-dropdown .dropdown-toggle .user-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(128, 128, 128, 0.185);
+  background-color: rgba(0, 0, 0, 0.034);
+  transition: .4s ease-in-out;
+}
+header #profile-dropdown .dropdown-toggle .user-icon:hover {
+  background-color: rgba(0, 0, 0, 0.116);
+}
+header #profile-dropdown .dropdown-menu {
+  min-width: 200px;
+  max-width: 240px;
+}
+header #profile-dropdown .dropdown-menu .email-address {
+  font-size: .8rem;
+}
+header #profile-dropdown .dropdown-menu li i.fa {
+  width: 20px;
+  color: rgba(0, 0, 0, 0.64);
+}
+

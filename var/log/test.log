@@ -1,0 +1,4 @@
+[Tue Mar 5 22:05:53 2024] test_logger.WARNING Could not log the user in 
+[Tue Mar 5 22:05:53 2024] test_logger.ERROR An error occurred retrieving the information 
+[Sun May 5 16:32:06 2024] test_logger.WARNING Could not log the user in 
+[Sun May 5 16:32:06 2024] test_logger.ERROR An error occurred retrieving the information 

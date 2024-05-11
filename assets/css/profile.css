@@ -1,0 +1,10 @@
+main {
+  display: flex;
+  align-items: flex-start;
+  
+}
+main #sidebar-content {
+  width: 210px;
+  min-width: 210px;
+  min-height: 100vh;
+}

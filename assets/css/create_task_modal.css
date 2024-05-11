@@ -1,0 +1,41 @@
+body.modal-open {
+  padding-right: initial !important;
+}
+/* Add New Task Modal */
+.modal-close-btn {
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  transition: .2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.75);
+}
+.modal-close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+main .task-modal .form-field {
+  margin: var(--spacing-3) 0;
+}
+main .task-modal .form-field label {
+  display: block;
+  color: #000000c2;
+}
+main .task-modal .form-field input,
+main .task-modal .form-field textarea,
+main .task-modal .form-field select {
+  display: block;
+  width: 100%;
+  outline: none;
+  padding: var(--spacing-1-xy);
+  border: 1px solid rgba(0, 0, 0, 0.37);
+  border-radius: .2rem;
+}
+main .task-modal .form-field input {
+
+}
+main .task-modal .form-field textarea {
+
+}

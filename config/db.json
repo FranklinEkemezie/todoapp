@@ -1,0 +1,127 @@
+{
+  "tables": {
+    "users": {
+      "name": "users",
+      "fields": {
+        "id": {
+          "name": "id",
+          "description": "The ID of the user",
+          "type": "integer",
+          "default": "AUTO INCREMENT"
+        },
+        "firstname": {
+          "name": "firstname",
+          "description": "The firstname of the user",
+          "type": "string",
+          "default": "NULL"
+        },
+        "lastname": {
+          "name": "lastname",
+          "description": "The lastname of the user",
+          "type": "string",
+          "default": "NULL"
+        },
+        "username": {
+          "name": "username",
+          "description": "The username of the user",
+          "type": "string",
+          "default": "NOT NULL"
+        },
+        "email": {
+          "name": "email",
+          "description": "The email of the user",
+          "type": "string",
+          "default": "NULL"
+        },
+        "password": {
+          "name": "password",
+          "description": "The password of the user",
+          "type": "string",
+          "default": "NULL"
+        },
+        "dob": {
+          "name": "dob",
+          "description": "The date of birth of the user",
+          "type": "datetime",
+          "default": "NULL"
+        },
+        "photo_id": {
+          "name": "photo_id",
+          "description": "The photo ID of the user's profile picture",
+          "default": "NULL"
+        }
+      }
+    },
+    "tasks": {
+      "name": "tasks",
+      "fields": {
+        "id": {
+          "name": "id",
+          "description": "The ID of the task",
+          "type": "integer",
+          "default": "AUTO INCREMENT"
+        },
+        "task_id": {
+          "name": "task_id",
+          "description": "The task ID of the task",
+          "type": "string",
+          "default": "NOT NULL - UNIQUE AUTO GENERERATED"
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": "The ID of the user who created the task",
+          "type": "int",
+          "default": "NOT NULL - FOREIGN KEY"
+        },
+        "title": {
+          "name": "title",
+          "description": "The title of the task",
+          "type": "string",
+          "default": "NOT NULL"
+        },
+        "description": {
+          "name": "description",
+          "description": "The description of the task",
+          "type": "string",
+          "default": "NOT NULL"
+        },
+        "status": {
+          "name": "status",
+          "description": "The status of the task",
+          "type": "integer",
+          "default": "NOT NULL"
+        },
+        "date_created": {
+          "name": "date_created",
+          "description": "The date the task is created",
+          "type": "datetime",
+          "default": "NOT NULL - CURRENT TIMESTAMP"
+        },
+        "datetime_due": {
+          "name": "datetime_due",
+          "description": "The deadline of the task",
+          "type": "datetime",
+          "default": "NULL"
+        },
+        "last_edited": {
+          "name": "last_edited",
+          "description": "The date the task was last edited",
+          "type": "datetime",
+          "default": "NULL"
+        },
+        "priority": {
+          "name": "priority",
+          "description": "The priority of the task",
+          "type": "integer",
+          "default": "1"
+        },
+        "category": {
+          "name": "category",
+          "description": "The category of the task",
+          "type": "integer",
+          "default": "1"
+        }
+      }
+    }
+  }
+}

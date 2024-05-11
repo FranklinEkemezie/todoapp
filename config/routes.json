@@ -1,0 +1,102 @@
+{
+  "login": {
+    "controller": "User",
+    "method": "login"
+  },
+  "signup": {
+    "controller": "User",
+    "method": "signup"
+  },
+  "logout": {
+    "controller": "User",
+    "method": "logout"
+  },
+  "user/dashboard": {
+    "controller": "User",
+    "method": "showDashboard",
+    "authentication": true
+  },
+  "user/settings": {
+    "controller": "User",
+    "method": "displaySettings",
+    "authentication": true
+  },
+  "user/settings/:tab": {
+    "controller": "User",
+    "method": "getSettingTabContent",
+    "authentication": true,
+    "params": {
+      "tab": "string"
+    }
+  },
+  "user/profile": {
+    "controller": "User",
+    "method": "getUserProfile",
+    "authentication": true
+  },
+  "user/profile/edit": {
+    "controller": "User",
+    "method": "editProfile",
+    "authentication": true
+  },
+  "user/profile/photo": {
+    "controller": "User",
+    "method": "getUserProfilePicture",
+    "authentication": true
+  },
+  "tasks": {
+    "controller": "Task",
+    "method": "getTasksByStatus",
+    "authentication": true
+  },
+  "task/create": {
+    "controller": "Task",
+    "method": "createTask",
+    "authentication": true
+  },
+  "task/:id": {
+    "controller": "Task",
+    "method": "viewTask",
+    "authentication": true,
+    "params": {
+      "id": "string"
+    }
+  },
+  "task/:id/view": {
+    "controller": "Task",
+    "method": "viewTask",
+    "authentication": true,
+    "params": {
+      "id": "string"
+    }
+  },
+  "task/:id/edit": {
+    "controller": "Task",
+    "method": "editTask",
+    "authentication": true,
+    "params": {
+      "id": "string"
+    }
+  },
+  "task/:id/delete": {
+    "controller": "Task",
+    "method": "deleteTask",
+    "authentication": true,
+    "params": {
+      "id": "string"
+    }
+  },
+  "apis/tasks": {
+    "controller": "Api",
+    "method": "getTasksByStatus",
+    "authentication": true
+  },
+  "ssevent": {
+    "controller": "SSEvent",
+    "method": "handleSSEvent"
+  },
+  "test": {
+    "controller": "User",
+    "method": "test"
+   }
+}

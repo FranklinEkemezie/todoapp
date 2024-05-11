@@ -1,0 +1,37 @@
+Primary Colour:
+#4caf50 (Green)
+
+Secondary Colour:
+#ffc017 (Amber)
+
+Background Colour:
+#ffffff (White)
+
+Text Colour:
+#212121 (Dark Grey)
+
+Button Colour:
+#2196f3 (Blue)
+
+Hover Colour:
+#1976d2 (Dark blue)
+
+Border Colour:
+#bdbdbd (Light grey)
+
+Accent Colour:
+#ff5722 (Deep Orange)
+
+Success Colour:
+#00c853 (Green)
+
+Error Colour:
+#d50000 (Red)
+
+Shadows:
+Shadow 1: 0 2px 4px rgba(0, 0, 0, 0.1)
+Shadow 2: 0 2px 4px rgba(76, 175, 80, 0.2)
+
+Gradients:
+Green_Amber: linear-gradient(to right, #4caf50, #ffc017) // Green to Amber
+White_Light_grey: linear-gradient(to bottom, #ffffff, #e0e0e0) // White to Light grey/

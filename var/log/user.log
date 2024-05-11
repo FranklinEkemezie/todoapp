@@ -1,0 +1,89 @@
+[Mon Apr 29 9:09:00 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Mon Apr 29 10:35:51 2024] todoapp.WARNING An error occurred while editing User @ (franklynpeter2006@gmail.com) profile: Data: Franklin_76 MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '9'' at line 1{"password":"Franklin_76"} 
+[Wed May 1 14:44:32 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Wed May 1 14:44:37 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Wed May 1 14:45:03 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Wed May 1 14:46:46 2024] todoapp.WARNING Incorrect email address: franklynpeter2006@gmail.com or password 
+[Wed May 1 14:51:12 2024] todoapp.WARNING Incorrect email address: franklynpeter2006@gmail.com or password 
+[Wed May 1 14:54:22 2024] todoapp.WARNING Incorrect email address: franklynpeter2006@gmail.com or password 
+[Wed May 1 14:57:34 2024] todoapp.WARNING Incorrect email address: franklynpeter2006@gmail.com or password 
+[Wed May 1 14:57:46 2024] todoapp.WARNING Incorrect email address: franklynpeter2006@gmail.com or password 
+[Sun May 5 17:40:54 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 17:41:15 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 17:41:38 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 17:46:33 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 17:47:18 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 17:56:16 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 17:57:45 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 17:58:35 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 18:01:19 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 18:02:19 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 18:03:08 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Sun May 5 18:05:11 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 18:05:41 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 18:05:45 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 5 18:11:41 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Sun May 5 18:12:45 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Sun May 5 18:14:53 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Sun May 5 18:15:15 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Sun May 5 18:19:47 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Mon May 6 7:21:20 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Mon May 6 19:37:19 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Mon May 6 19:39:41 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Mon May 6 19:41:26 2024] todoapp.WARNING Incorrect email address: philip_@okonkwo.pe or password 
+[Mon May 6 19:41:51 2024] todoapp.WARNING Incorrect email address: philip_@okonkwo.pe or password 
+[Mon May 6 19:43:04 2024] todoapp.WARNING Incorrect email address: philip_@okonkwo.pe or password 
+[Mon May 6 20:49:32 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Mon May 6 20:51:48 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Mon May 6 20:54:17 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Mon May 6 20:54:40 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Mon May 6 20:55:10 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Mon May 6 20:59:07 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data: C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Controllers/../../app_data/profile_imgs/user-pfp-6639368b8062f.png MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1{"photo_id":"C:\\xampp\\htdocs\\PROJECTS\\Working\\Startingup\\todoapp\\src\\Controllers\/..\/..\/app_data\/profile_imgs\/user-pfp-6639368b8062f.png"} 
+[Tue May 7 8:40:21 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Tue May 7 15:20:55 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Wed May 8 5:27:30 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Wed May 8 10:43:52 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Wed May 8 10:52:50 2024] todoapp.WARNING An error occurred while editing User @ (franklynpeter2006@gmail.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '9'' at line 1[] 
+[Wed May 8 10:55:32 2024] todoapp.WARNING Incorrect email address: franklynpeter2006@gmail.com or password 
+[Wed May 8 10:56:35 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Wed May 8 10:58:12 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Wed May 8 17:47:22 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 17:49:50 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 17:50:52 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 17:53:17 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 17:54:14 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 17:55:00 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 17:58:02 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 17:59:18 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 17:59:45 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data:  MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 18:04:22 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data: [] MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 18:07:24 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data: [] MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 18:10:45 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data: [] MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[]ToDoApp\Utils\FilteredMap Object
+(
+    [map:ToDoApp\Utils\FilteredMap:private] => Array
+        (
+        )
+
+)
+ 
+[Wed May 8 18:11:10 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data: [] MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[]ToDoApp\Utils\FilteredMap Object
+(
+    [map:ToDoApp\Utils\FilteredMap:private] => Array
+        (
+        )
+
+)
+ 
+[Wed May 8 18:12:54 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data: [] MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 18:16:35 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data: [] MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 21:00:44 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data: [] MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 21:33:42 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data: [] MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 21:35:12 2024] todoapp.WARNING An error occurred while editing User @ (john@doe.com) profile: Data: [] MySQL error msg: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '6'' at line 1[] 
+[Wed May 8 22:21:03 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Fri May 10 6:42:38 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Fri May 10 6:43:38 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Fri May 10 7:13:06 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Fri May 10 8:30:26 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Fri May 10 20:31:13 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Sat May 11 2:14:34 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Sat May 11 2:15:52 2024] todoapp.INFO User john@doe.com logged in successfully 

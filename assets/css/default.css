@@ -1,0 +1,127 @@
+/* Import Bootstrap */
+@import url("../vendor/bootstrap/css/bootstrap.min.css");
+
+/* Import FontAwesome font */
+@import url("../vendor/fontawesome/css/all.min.css");
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik/Rubik-Regular.ttf");
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+:root {
+  /* Colours */
+  --colour-green: #4caf50;
+  --colour-amber: #ffc017;
+  --colour-white: #fff;
+  --colour-dark-grey: #212121;
+  --colour-blue: #2196f3;
+  --colour-dark-blue: #1976d2;
+  --colour-light-grey: #bdbdbd;
+  --colour-deep-orange: #ff5722;
+  --colour-green-1: #00c853;
+  --colour-red: #d50000;
+  --colour-light-grey-1: #e0e0e0;
+  --colour-dark-grey-1: rgba(33, 33, 33, 0.75);
+
+  /* Theme */
+  --theme-primary: var(--colour-green);
+  --theme-secondary: var(--colour-amber);
+  --theme-accent: var(--colour-deep-orange);
+
+  --theme-success: var(--colour-green-1);
+  --theme-error: var(--colour-red);
+
+  --theme-background-colour: var(--colour-white);
+  --theme-text-colour: var(--colour-dark-grey);
+  --theme-text-colour-1: var(--colour-dark-grey-1);
+  --theme-button-colour: var(--colour-blue);
+  --theme-button-hover-colour: var(--colour-dark-blue);
+  --theme-border-colour: var(--colour-light-grey);
+
+  /* Shadow */
+  --theme-shadow-1: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --theme-shadow-2: 0 2px 4px rgba(76, 175, 80, 0.2);
+
+  /* Gradients */
+  --theme-gradient-1: linear-gradient(to right, var(--theme-primary), var(--theme-secondary));
+  --theme-gradient-2: linear-gradient(to bottom, var(--colour-white), var(--colour-light-grey-1));
+
+  /* Spacings for paddings and margins */
+  --spacing-1: .2rem;
+  --spacing-1-x: 0 var(--spacing-1);
+  --spacing-1-y: var(--spacing-1) 0;
+  --spacing-1-xy: var(--spacing-1);
+
+  --spacing-2: .4rem;
+  --spacing-2-x: 0 var(--spacing-2);
+  --spacing-2-y: var(--spacing-2) 0;
+  --spacing-2-xy: var(--spacing-2);
+
+  --spacing-3: .8rem;
+  --spacing-3-x: 0 var(--spacing-3);
+  --spacing-3-y: var(--spacing-3) 0;
+  --spacing-3-xy: var(--spacing-3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 32px;
+}
+h4 {
+  font-size: 28px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 20px;
+}
+
+a.link {
+  text-decoration: none;
+  transition: .4s;
+}
+a.link:hover {
+  text-decoration: underline;
+}
+
+/* Remove Bootstrap default */
+button.btn,
+a.btn,
+input.form-control {
+  box-shadow: none !important;
+}
+.btn-close {
+  background-image: none;
+}
+.overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
