@@ -87,3 +87,22 @@
 [Fri May 10 20:31:13 2024] todoapp.INFO User john@doe.com logged in successfully 
 [Sat May 11 2:14:34 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
 [Sat May 11 2:15:52 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Sat May 11 8:14:02 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Sun May 12 8:42:55 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Sun May 12 8:45:04 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Sun May 12 17:39:37 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Sun May 12 18:04:47 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Sun May 12 18:05:22 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 12 18:10:22 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 12 18:10:43 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 12 18:11:16 2024] todoapp.WARNING Incorrect email address: john@doe.com or password 
+[Sun May 12 19:21:27 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Mon May 13 5:02:26 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Mon May 13 5:07:42 2024] todoapp.INFO User john@doe.com logged in successfully 
+[Mon May 13 5:37:41 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Mon May 13 5:46:06 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Wed May 15 22:48:02 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Wed May 15 22:55:20 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Wed May 15 23:13:28 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Wed May 15 23:14:11 2024] todoapp.INFO User franklynpeter2006@gmail.com logged in successfully 
+[Wed May 15 23:16:41 2024] todoapp.INFO User john@doe.com logged in successfully 

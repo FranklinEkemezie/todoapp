@@ -20,3 +20,36 @@
 [Sat Apr 13 22:47:33 2024] todoapp.WARNING An error occurred while editing the task (31e82af0f43bd): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE task_id = '31e82af0f43bd'' at line 3 
 [Mon Apr 29 9:10:44 2024] todoapp.ERROR An error occurred creating task for franklynpeter2006@gmail.com 
 [Mon Apr 29 9:20:18 2024] todoapp.INFO Task 6c1f581e900cc created successfully for @franklynpeter2006@gmail.com 
+[Sun May 12 10:27:16 2024] todoapp.ERROR An error occurred creating task for john@doe.com 
+[Sun May 12 10:29:14 2024] todoapp.ERROR An error occurred creating task for john@doe.com: User john@doe.com not found! 
+[Sun May 12 10:29:55 2024] todoapp.ERROR An error occurred creating task for john@doe.com: User john@doe.com not found!126 
+[Sun May 12 10:30:37 2024] todoapp.ERROR An error occurred creating task for john@doe.com: User john@doe.com not found!126C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Models\UserModel.php 
+[Sun May 12 10:34:01 2024] todoapp.ERROR An error occurred creating task for john@doe.com: User john@doe.com not found!126C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Models\UserModel.php#0 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Models\TaskModel.php(119): ToDoApp\Models\UserModel->getId()
+#1 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Controllers\TaskController.php(85): ToDoApp\Models\TaskModel->createTask()
+#2 [internal function]: ToDoApp\Controllers\TaskController->createTask()
+#3 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Core\Router.php(199): call_user_func()
+#4 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Core\Router.php(174): ToDoApp\Core\Router->executeController()
+#5 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\index.php(62): ToDoApp\Core\Router->route()
+#6 {main} 
+[Sun May 12 17:42:09 2024] todoapp.ERROR An error occurred creating task for john@doe.com: User john@doe.com not found!126C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Models\UserModel.php#0 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Models\TaskModel.php(119): ToDoApp\Models\UserModel->getId()
+#1 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Controllers\TaskController.php(85): ToDoApp\Models\TaskModel->createTask()
+#2 [internal function]: ToDoApp\Controllers\TaskController->createTask()
+#3 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Core\Router.php(199): call_user_func()
+#4 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Core\Router.php(174): ToDoApp\Core\Router->executeController()
+#5 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\index.php(62): ToDoApp\Core\Router->route()
+#6 {main} 
+[Sun May 12 17:44:16 2024] todoapp.ERROR An error occurred creating task for john@doe.com: Message: User john@doe.com not found!Stack Trace: #0 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Models\TaskModel.php(119): ToDoApp\Models\UserModel->getId()
+#1 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Controllers\TaskController.php(85): ToDoApp\Models\TaskModel->createTask()
+#2 [internal function]: ToDoApp\Controllers\TaskController->createTask()
+#3 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Core\Router.php(199): call_user_func()
+#4 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Core\Router.php(174): ToDoApp\Core\Router->executeController()
+#5 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\index.php(62): ToDoApp\Core\Router->route()
+#6 {main} 
+[Sun May 12 17:44:35 2024] todoapp.ERROR An error occurred creating task for john@doe.com: Message: User john@doe.com not found! Stack Trace: #0 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Models\TaskModel.php(119): ToDoApp\Models\UserModel->getId()
+#1 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Controllers\TaskController.php(85): ToDoApp\Models\TaskModel->createTask()
+#2 [internal function]: ToDoApp\Controllers\TaskController->createTask()
+#3 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Core\Router.php(199): call_user_func()
+#4 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\src\Core\Router.php(174): ToDoApp\Core\Router->executeController()
+#5 C:\xampp\htdocs\PROJECTS\Working\Startingup\todoapp\index.php(62): ToDoApp\Core\Router->route()
+#6 {main} 
+[Sun May 12 20:18:49 2024] todoapp.INFO Task d5e4e655ef490 created successfully for @john@doe.com 

@@ -73,7 +73,7 @@
               <sup class="badge rounded-pill bg-danger small"><?php insert($no_of_tasks_in_progress); ?></sup>
               <?php endif; ?>
             </a></li>
-            <li><a href="" class="dropdown-item"><i class="fa fa-gear"></i> Settings</a> </li>
+            <li><a href="/user/settings" class="dropdown-item"><i class="fa fa-gear"></i> Settings</a> </li>
             <!-- Dropdown divider -->
             <li><hr class="dropdown-divider"></li>
             <li><a href="/logout" class="dropdown-item"><i class="fa fa-sign-out"></i> Logout</a></li>

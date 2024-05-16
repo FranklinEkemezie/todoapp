@@ -99,7 +99,7 @@ class TaskModel extends AbstractModel {
    * 
    */
   public function createTask(
-    User $user,
+    int $user_id,
     string $title,
     string $description,
     int $status,
@@ -111,15 +111,8 @@ class TaskModel extends AbstractModel {
       VALUES (:title, :task_id, :user_id, :description, :status, :datetime_due, :priority, :category)";
     $statement = $this -> db -> prepare($query);
 
-    // Get the task ID
+    // Generate the task ID
     $task_id = substr(md5(str_shuffle($title)), 0, 13);
-
-    // Get the user ID
-    $user_model = new UserModel($this -> db);
-    $user_id = $user_model -> getId(
-      $user -> getEmail(),
-      $user -> getPassword()
-    );
 
     try {
       return $statement -> execute([
@@ -277,10 +270,4 @@ class TaskModel extends AbstractModel {
     return $tasks;
   }
 
-
-
-
 }
-
-
-?>

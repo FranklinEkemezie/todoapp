@@ -207,7 +207,7 @@ function validatePassword(password) {
  * Displays a notification message
  * 
  * @param {string} content The content of the notification message
- * @param {string} type The notification message type
+ * @param {string} type The notification message type. One of BS alert types - warning, success, danger
  * 
  * @return {Element} Returns the toast element that display the notification message
  */
@@ -267,8 +267,10 @@ function displayNotificationMessage(content, type) {
 function copyText(text) {
   if(typeof copy !== "undefined") {
     copy(text);
-    return;
-  } else {
+  } else if (typeof navigator !== "undefined" && typeof navigator.clipboard !== "undefined") {
+    navigator.clipboard.writeText(text);
+  } 
+  else {
     let copy_input_el = document.createElement("input");
     copy_input_el.id = copy_input_el.name = "copy-input-el";
     copy_input_el.value = text;

@@ -34,10 +34,13 @@
 
   <main class="m-2 m-md-4">
     <!-- Create Task Modal -->
-    <?php require_once __DIR__ . "/../../src/includes/create_task_modal.php";  ?>
+    <?php require_once __DIR__ . "/../../src/includes/create_task_modal.php"; ?>
 
     <!-- Edit Task Modal -->
     <?php require_once __DIR__ . "/../../src/includes/edit_task_modal.php"; ?>
+
+    <!-- Edit Task Tag Modal -->
+    <?php require_once __DIR__ ."/../../src/includes/edit_task_tag_modal.php"; ?>
 
     <section class="border rounded-3">
       <div class="title pt-3 px-3 border-bottom bg-light">
@@ -59,28 +62,50 @@
       </div>
 
       <div class="status pt-3 px-3 border-bottom">
-        <h3 class="fw-bold">Status</h3>
+        <h3 class="fw-bold">Status <i class="fa fa-chart-line text-muted fs-4"></i></h3>
         <p><?php insertc([$task, 'getStatus']) ?></p>
       </div>
 
       <div class="category pt-3 px-3 border-bottom">
-        <h3 class="fw-bold">Category</h3>
+        <h3 class="fw-bold">Category <i class="fa fa-chart-pie text-muted fs-4"></i></h3>
         <p><?php insertc([$task, 'getCategory']); ?></p>
       </div>
 
       <div class="priority pt-3 px-3 border-bottom">
-        <h3 class="fw-bold">Priority</h3>
+        <h3 class="fw-bold">Priority <i class="fa fa-chart-simple text-muted fs-4"></i></h3>
         <p><?php insertc([$task, 'getPriority']); ?></p>
       </div>
 
       <div class="attachements pt-3 px-3 border-bottom">
-        <h3 class="fw-bold">Attachments</h3>
+        <h3 class="fw-bold">Attachments <i class="fa fa-link text-muted fs-4"></i></h3>
         <p><i class="fa fa-clock"></i></p>
       </div>
 
       <div class="tags pt-3 px-3">
-        <h3 class="fw-bold">Tags</h3>
-        <p><?php insertc([$task, 'getCategory']); ?></p>
+        <h3 class="fw-bold">Tags <i class="fa fa-tags text-muted fs-4"></i></h3>
+
+        <div class="tags-container my-3">
+          <!-- Tags go here -->
+          <div class="btn-group rounded-pill shadow-sm me-1 mb-1" role="group">
+            <button type="button" class="btn btn-sm btn-primary rounded-pill rounded-end"><?php insertc([$task, 'getCategory']); ?></button>
+            <button type="button" class="btn btn-sm btn-primary rounded-pill rounded-start" title="Remove tag"><i class="fa fa-close"></i></button>
+          </div>
+
+          <div class="btn-group rounded-pill shadow-sm me-1 mb-1" role="group">
+            <button type="button" class="btn btn-sm btn-primary rounded-pill rounded-end"><?php insertc([$task, 'getCategory']); ?></button>
+            <button type="button" class="btn btn-sm btn-primary rounded-pill rounded-start" title="Remove tag"><i class="fa fa-close"></i></button>
+          </div>
+
+          <div class="btn-group rounded-pill shadow- me-1 mb-1" role="group">
+            <button type="button" class="btn btn-sm btn-primary rounded-pill rounded-end"><?php insertc([$task, 'getCategory']); ?></button>
+            <button type="button" class="btn btn-sm btn-primary rounded-pill rounded-start" title="Remove tag"><i class="fa fa-close"></i></button>
+          </div>
+
+          <p class="my-2">
+            <span class="fst-italic small">Tags help group related tasks and make searches even more better!</span> <br>
+            <button class="btn btn-sm btn-outline-secondary my-2 rounded-3 px-3" data-bs-toggle="modal" data-bs-target="#edit-task-tag-static-backdrop"><i class="fa fa-tag me-1"></i> Add a tag</button>
+          </p>
+        </div>
       </div>
 
     </section>

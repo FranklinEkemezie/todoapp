@@ -93,10 +93,4 @@ class Task implements \JsonSerializable {
     );
   }
 
-  public function __sleep() {
-    echo "me";
-  }
-
 }
-
-?>

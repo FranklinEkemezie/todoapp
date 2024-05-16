@@ -49,7 +49,7 @@ class Database {
    * 
    * @param PDO $db_conn Specifies the database connection to use
    * @param string $table The table to select data from
-   * @param array $fields An array of field names to retrieve
+   * @param array $fields An array of field names to retrieve. Give an empty array if you want to retrieve all rows
    * @param ?array $condtions An associative array of the conditions for
    * a row to be selected. The key-value element of the array will demand that
    * the row to be selected must have the field 'key' equal to the corresponding value.

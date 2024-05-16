@@ -8,7 +8,6 @@ use ToDoApp\Core\Request;
 use ToDoApp\Core\Response;
 use ToDoApp\Core\Views;
 use ToDoApp\Domain\Task;
-use ToDoApp\Domain\User;
 use ToDoApp\Exceptions\DbException;
 use ToDoApp\Exceptions\NotFoundException;
 use ToDoApp\Models\TaskModel;
@@ -83,7 +82,7 @@ class TaskController extends AbstractController {
     try {
       $task_model = new TaskModel($this -> db);
       $task_model -> createTask(
-        $user,
+        $user_id,
         $task_title,
         $task_description,
         $status,
@@ -100,18 +99,10 @@ class TaskController extends AbstractController {
       $user_email = $user -> getEmail();
       $this -> logger -> info("Task $taskID created successfully for @$user_email");
     } catch (Exception $e) {
-      echo "An error occured";
-      echo "<br/>";
-
-      echo $e -> getMessage();
-
       $user_email = $user -> getEmail();
-      $this -> logger -> error("An error occurred creating task for $user_email");
+      $this -> logger -> error("An error occurred creating task for $user_email: " . "Message: " . $e -> getMessage() . " Stack Trace: " . $e -> getTraceAsString());
 
-      $message = [
-        FALSE,
-        'An error occurred'
-      ];
+      $message = [FALSE, 'An error occurred'];
       return self::prepareResponse(json_encode($message), "application/json");
     }
 

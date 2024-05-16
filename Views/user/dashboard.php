@@ -19,6 +19,7 @@
   <!-- Main Script -->
   <script src="./../../assets/js/functions.js" defer></script>
   <script src="./../../assets/js/utils.js" defer></script>
+  <script src="./../../assets/js/FontAwesomeIcons.js" defer></script>
   <script src="./../../assets/js/domain/Task.js" defer></script>
   <script src="./../../assets/js/dashboard.js" defer></script>
 
@@ -62,13 +63,10 @@
       </div>
 
       <!-- Offcanvas Footer -->
-      <div class="offcanvas-footer">
-        <hr class="hr">
-        <div class="px-2">
-          <ul class="list-unstyled">
-            <li><i class="fa fa-gear me-1"></i><a href="./settings" class="link text-dark text-decoration"> Settings</a></li>
-            <li><i class="fa fa-user me-1"></i><a href="./settings?tab=manage_account" class="link text-dark text-decoration"> Manage Account</a></li>
-          </ul>
+      <div class="offcanvas-footer py-2">
+        <div class="list-group list-group-flush border-top border-bottom">
+          <a href="./settings" class="list-group-item list-group-item-action"><i class="fa fa-gear me-1"></i> Settings</a>
+          <a href="./settings?tab=manage_account" class="list-group-item list-group-item-action"><i class="fa fa-user-gear"></i> Manage Account</a>
         </div>
       </div>
     </section>
@@ -120,6 +118,12 @@
 
         <!-- Display Tasks here -->
         <section id="tasks">
+          <!-- Switch View -->
+          <div class="form-check form-switch switch-view d-flex align-items-center justify-content-end my-2">
+            <input class="form-check-input me-2" type="checkbox" id="switch-view" onchange="switchTaskDisplayView()">
+            <label class="form-check-label" for="switch-view">Switch View</label>
+          </div>
+
           <!-- Loader -->
           <div class="loader d-flex align-items-center justify-content-center mt-5">
             <div class="spinner-grow text-dark me-2"></div>
@@ -127,234 +131,10 @@
             <a href="./../"></a>
           </div>
 
-          <!-- Switch View -->
-          <div class="form-check form-switch switch-view d-flex align-items-center justify-content-end">
-            <input class="form-check-input me-2" type="checkbox" id="switch-view">
-            <label class="form-check-label" for="switch-view">Switch View</label>
-          </div>
+          <!-- TASK VIEW GOES HERE -->
 
-          <div id="list-view" class="d-none">
-            <!-- Not Started -->
-            <div id="not-started" class="task-display px-2 mt-2 mb-4">
-              <h3 class="fw-bold my-3 fs-4"><i class="fa fa-square"></i> Not Started</h3>
 
-              <div class="task-display-wrapper">
-                <div class="task-display-container">
-                  <!-- Task display goes here -->
-                  
-                </div>
-              </div>
-
-            </div>
-
-            <!-- In Progress -->
-            <div id="in-progress" class="px-2 mt-2 mb-4">
-              <h3 class="fw-bold my-3 fs-4"><i class="fa fa-play"></i> In Progress</h3>
-
-              <div class="task-display-wrapper">
-                <div class="task-display-container">
-
-                </div>
-              </div>
-            </div>
-
-            <!-- Completed -->
-            <div id="completed" class="px-2 mt-2 mb-4">
-              <h3 class="fw-bold my-3 fs-4"><i class="fa fa-circle"></i> Completed</h3>
-
-              <div class="task-display-wrapper">
-                <div class="task-display-container">
-
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div id="tab-view">
-            <div class="tab-view-container">
-              <!-- Nav tabs -->
-              <ul class="nav nav-tabs font-primary">
-                <li class="nav-item">
-                  <a href="#todo-tab-pane" class="nav-link active overflow-ellipsis text-muted" data-bs-toggle="tab">
-                    <span class="badge bg-danger rounded-pill"><?php insertc("count", [$tasks['not_started']]); ?></span> 
-                    To Do
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#in-progress-tab-pane" class="nav-link overflow-ellipsis text-muted" data-bs-toggle="tab">
-                    <span class="badge bg-secondary rounded-pill"><?php insertc("count", [$tasks['in_progress']]);  ?></span>
-                    In Progress
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#completed-tab-pane" class="nav-link overflow-ellipsis text-muted" data-bs-toggle="tab">
-                    <span class="badge bg-success rounded-pill"><?php insertc("count", [$tasks['completed']]); ?></span>
-                    Completed
-                  </a>
-                </li>
-              </ul>
-
-              <!-- Tab panes -->
-              <div class="tab-content">
-                <div id="todo-tab-pane" class="tab-pane active">
-                  <ul class="list-group">
-                    <!-- Task list 1 -->
-                    <li class="list-group-item rounded-0 task-list">
-                      <a href="" class="d-flex align-items-center task-list-container">
-                        <!-- Task description image -->
-                        <div class="task-desc-img-container pe-1">
-                          <img src="./../../assets/imgs/no_desc_img.png" alt="" class="task-desc-img img-fluid rounded-circle" width="40px" height="40px" />
-                        </div>
-
-                        <!-- Task details -->
-                        <div class="ps-1">
-                          <h5 class="task-title overflow-ellipsis">Attend X Space</h5>
-                          <p class="task-description overflow-ellipsis">Nobis deserunt enim quam veniam necessitatibus! Non, ab modi.</p>
-                        </div>
-
-                        <!-- Task options list -->
-                        <div class="task-options">
-                          <div class="dropdown">
-                            <button class="btn btn-sm rounded-circle dropdown-toggle" type="button" id="task-option-dropdown-btn" data-bs-toggle="dropdown">
-                              <span class="fa fa-ellipsis"></span>
-                            </button>
-
-                            <ul class="dropdown-menu dropdown-menu-end small shadow">
-                              <li><a href="" class="dropdown-item"><i class="fa fa-up-right-from-square"></i> View Task</a></li>
-                              <li><a href="" class="dropdown-item"><i class="fa fa-check-double"></i> Mark as Completed</a></li>
-                              <li><a class="dropdown-item" href=""><i class="fa fa-bookmark"></i> Bookmark Task</a></li>
-                              <li><a class="dropdown-item" href=""><i class="fa fa-copy"></i> Copy Task Link</a></li>
-                              <li><a class="dropdown-item" href=""><i class="fa fa-trash-can"></i>Delete Task</a></li>
-
-                            </ul>
-                          </div>
-
-                        </div>
-                      </a>
-                    </li>
-
-                    <!-- Task list 2 -->
-                    <li class="list-group-item rounded-0 task-list">
-                      <a href="" class="d-flex align-items-center task-list-container">
-                        <div class="task-desc-img-container pe-1">
-                          <img src="./../../assets/imgs/no_desc_img.png" alt="" class="task-desc-img img-fluid rounded-circle" width="40px" height="40px" />
-                        </div>
-                        <div class="ps-1">
-                          <h5 class="task-title overflow-ellipsis">Attend X Space</h5>
-                          <p class="task-description overflow-ellipsis">Nobis deserunt enim quam veniam necessitatibus! Non, ab modi.</p>
-                        </div>
-                      </a>
-                    </li>
-
-                    <!-- Task list 3 -->
-                    <li class="list-group-item rounded-0 task-list">
-                      <a href="" class="d-flex align-items-center task-list-container">
-                        <div class="task-desc-img-container pe-1">
-                          <img src="./../../assets/imgs/no_desc_img.png" alt="" class="task-desc-img img-fluid rounded-circle" width="40px" height="40px" />
-                        </div>
-                        <div class="ps-1">
-                          <h5 class="task-title overflow-ellipsis">Attend X Space</h5>
-                          <p class="task-description overflow-ellipsis">Nobis deserunt enim quam veniam necessitatibus! Non, ab modi.</p>
-                        </div>
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-
-                <div id="in-progress-tab-pane" class="tab-pane container">
-                  <ul class="list-group">
-                    <!-- Task list 1 -->
-                    <li class="list-group-item rounded-0 task-list">
-                      <a href="" class="d-flex align-items-center task-list-container">
-                        <div class="task-desc-img-container pe-1">
-                          <img src="./../../assets/imgs/no_desc_img.png" alt="" class="task-desc-img img-fluid rounded-circle" width="40px" height="40px" />
-                        </div>
-                        <div class="ps-1">
-                          <h5 class="task-title overflow-ellipsis">Attend X Space</h5>
-                          <p class="task-description overflow-ellipsis">Nobis deserunt enim quam veniam necessitatibus! Non, ab modi.</p>
-                        </div>
-                      </a>
-                    </li>
-
-                    <!-- Task list 2 -->
-                    <li class="list-group-item rounded-0 task-list">
-                      <a href="" class="d-flex align-items-center task-list-container">
-                        <div class="task-desc-img-container pe-1">
-                          <img src="./../../assets/imgs/no_desc_img.png" alt="" class="task-desc-img img-fluid rounded-circle" width="40px" height="40px" />
-                        </div>
-                        <div class="ps-1">
-                          <h5 class="task-title overflow-ellipsis">Attend X Space</h5>
-                          <p class="task-description overflow-ellipsis">Nobis deserunt enim quam veniam necessitatibus! Non, ab modi.</p>
-                        </div>
-                      </a>
-                    </li>
-
-                    <!-- Task list 3 -->
-                    <li class="list-group-item rounded-0 task-list">
-                      <a href="" class="d-flex align-items-center task-list-container">
-                        <div class="task-desc-img-container pe-1">
-                          <img src="./../../assets/imgs/no_desc_img.png" alt="" class="task-desc-img img-fluid rounded-circle" width="40px" height="40px" />
-                        </div>
-                        <div class="ps-1">
-                          <h5 class="task-title overflow-ellipsis">Attend X Space</h5>
-                          <p class="task-description overflow-ellipsis">Nobis deserunt enim quam veniam necessitatibus! Non, ab modi.</p>
-                        </div>
-                      </a>
-                    </li>
-                </div>
-
-                <div id="completed-tab-pane" class="tab-pane container">
-                  <ul class="list-group">
-                    <!-- Task list 1 -->
-                    <li class="list-group-item rounded-0 task-list">
-                      <a href="" class="d-flex align-items-center task-list-container">
-                        <div class="task-desc-img-container pe-1">
-                          <img src="./../../assets/imgs/no_desc_img.png" alt="" class="task-desc-img img-fluid rounded-circle" width="40px" height="40px" />
-                        </div>
-                        <div class="ps-1">
-                          <h5 class="task-title overflow-ellipsis">Attend X Space</h5>
-                          <p class="task-description overflow-ellipsis">Nobis deserunt enim quam veniam necessitatibus! Non, ab modi.</p>
-                        </div>
-                      </a>
-                    </li>
-
-                    <!-- Task list 2 -->
-                    <li class="list-group-item rounded-0 task-list">
-                      <a href="" class="d-flex align-items-center task-list-container">
-                        <div class="task-desc-img-container pe-1">
-                          <img src="./../../assets/imgs/no_desc_img.png" alt="" class="task-desc-img img-fluid rounded-circle" width="40px" height="40px" />
-                        </div>
-                        <div class="ps-1">
-                          <h5 class="task-title overflow-ellipsis">Attend X Space</h5>
-                          <p class="task-description overflow-ellipsis">Nobis deserunt enim quam veniam necessitatibus! Non, ab modi.</p>
-                        </div>
-                      </a>
-                    </li>
-
-                    <!-- Task list 3 -->
-                    <li class="list-group-item rounded-0 task-list">
-                      <a href="" class="d-flex align-items-center task-list-container">
-                        <div class="task-desc-img-container pe-1">
-                          <img src="./../../assets/imgs/no_desc_img.png" alt="" class="task-desc-img img-fluid rounded-circle" width="40px" height="40px" />
-                        </div>
-                        <div class="ps-1">
-                          <h5 class="task-title overflow-ellipsis">Attend X Space</h5>
-                          <p class="task-description overflow-ellipsis">Nobis deserunt enim quam veniam necessitatibus! Non, ab modi.</p>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
-
-
-
-
       </div>
     </section>
   </main>

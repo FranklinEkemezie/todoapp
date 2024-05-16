@@ -44,34 +44,36 @@ class UserModel extends AbstractModel {
    */
   public function get(string $email, string $password): User {
     // Do some stuff and checks if the user exist
-    $row = Database::select($this -> db, "users", [], ["email" => $email]);
+    $row = Database::select(
+      $this -> db,
+      "users",
+      [], // empty rows? return all rows
+      ["email" => $email]
+    );
 
-    if(empty($row))
-      throw new NotFoundException("User with $email with password: " . PasswordHashing::hashPassword($password) .  " not found!");
+    if(empty($row)) {
+      throw new NotFoundException("User with email: $email not found");
+    }
 
     if(PasswordHashing::verifyPassword($password, $row['password'])) {
-      return new User(
-        $row['username'],
-        $email,
-        $password,
-        $row['firstname'],
-        $row['lastname']
-      );
+      return self::createUserFromRow($row);
     } else {
-      throw new NotFoundException("User $email with password: " . PasswordHashing::hashPassword($password) .  " not found!" . $row['password'] . " Pwd: $password");
+      throw new NotFoundException("User with email: $email not found");
     }
+
+    return self::createUserFromRow($row);
   }
 
   public function getById(int $user_id): User {
-    $query = "SELECT * FROM users WHERE id = :id";
-
-    $statement = $this -> db -> prepare($query);
-    $statement -> execute(["id" => $user_id]);
-
-    $user_row = $statement -> fetch();
+    $user_row = Database::select(
+      $this -> db,
+      "users",
+      [], // empty array? return all rows
+      ["id" => $user_id]
+    );
 
     if(empty($user_row)) {
-      throw new NotFoundException("User ID $user_id not found!");
+      throw new NotFoundException("User ID $user_id not found");
     }
 
     return self::createUserFromRow($user_row);
@@ -109,10 +111,7 @@ class UserModel extends AbstractModel {
     }
   }
 
-  public function getId(
-    string $email,
-    string $password
-  ): int {
+  public function getId(string $email, string $password): int {
     // Do some stuff and check if the user exist...get the ID
     $row = Database::select($this -> db, "users", ["id", "password"], ["email" => $email]);
 

@@ -44,7 +44,7 @@
       </div>
 
       <div class="text-center px-3 my-2 my-3">
-        <a href="dashboard" class="btn btn-sm btn-primary d-inline-block mx-auto"><i class="fa fa-arrow-left me-1"></i> Go to Dashboard</a>
+        <a href="dashboard" class="btn btn-sm rounded-pill px-3 shadow-sm btn-primary d-inline-block mx-auto"><i class="fa fa-arrow-left me-1"></i> Go to Dashboard</a>
       </div>
 
       <!-- Search Settings -->
@@ -84,7 +84,11 @@
 
       <!-- Setting Tab content -->
       <div id="settings-tab-content-container" class="position-relative">
-        <!-- Settings Tab Content Goes here -->
+        <!-- ---------------------------------------
+          /********************************************
+            * SETTING TAB CONTENT GOES HERE
+            ****************************************** */
+        ------------------------------------------- -->
       </div>
     </div>
   </main>

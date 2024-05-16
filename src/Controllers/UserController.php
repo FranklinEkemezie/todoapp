@@ -29,8 +29,11 @@ class UserController extends AbstractController {
     $this -> logger -> setLogFile(LogFile::get(LogFile::USER));
 
     // Try logging user in
-    if ($this -> request -> isGet()) {      
-      return self::prepareResponse($this -> renderView(Views::LOGIN, []));
+    if ($this -> request -> isGet()) { 
+      $email = $form_error_msg = '';
+      $context = compact('email', 'form_error_msg');
+
+      return self::prepareResponse($this -> renderView(Views::LOGIN, $context));
     } elseif ($this -> request -> isPost()) {
       $email = $this -> request -> getParams() -> getString('email');
       $password = $this -> request -> getParams() -> getString('password');
@@ -54,7 +57,6 @@ class UserController extends AbstractController {
         // Uncomment the line above to add extra info to the error message:
         // Not recommended as it may expose extra, sensitive information to the user
 
-
         $this -> logger -> warning("Incorrect email address: $email or password");
       } catch (Exception $e) {
         $form_error_msg = 'An error occurred!';
@@ -70,6 +72,14 @@ class UserController extends AbstractController {
       $content_body = $this -> renderView(Views::LOGIN, $context);
 
       return self::prepareResponse($content_body);
+    } else {
+      $email = $this -> request -> getParams() -> getString('email');
+      $form_error_msg = "Invalid request method";
+
+      $context = compact('email', 'form_error_msg');
+      $content_body = $this -> renderView(Views::LOGIN, $context);
+
+      return self::prepareResponse($content_body, "text/html", "HTTP/ 1.1 405 Method Not Allowed");
     }
   }
 
@@ -80,7 +90,7 @@ class UserController extends AbstractController {
     $has_completed_first_step = !empty($this -> request -> getSession() -> get(Request::USER_SIGNUP_TRACKED));
 
     if ($this -> request -> isGet() && !$has_completed_first_step) {
-      // User requests for the first sign up page
+      // User is requesting for the first sign up page
       return self::prepareResponse($this -> renderView(Views::SIGNUP, []));
     } elseif ($this -> request -> isGet() && $has_completed_first_step) {
       // Render the second sign up page
@@ -308,6 +318,16 @@ class UserController extends AbstractController {
     ------------------------------------------------ */
     $profile_imgs_dir = __DIR__ . "/../../app_data/profile_imgs";
 
+    $deleteOldProfilePicture = function($user_id) use ($user_model, $profile_imgs_dir) {
+      // Checks if user has a previous/older profile photo folder: Delete it
+      $prev_photo_id = $user_model -> getUserDetails($user_id)['photo-id'];
+      if(!is_null($prev_photo_id) && file_exists("$profile_imgs_dir/user-pfp-$prev_photo_id.gif")) {
+        // Delete it
+        unlink("$profile_imgs_dir/user-pfp-$prev_photo_id.gif");
+      }
+    };
+
+
     if(isset($_FILES['pfp-photo'])) { // Check if photo was uploaded
       $pfp_photo = $_FILES['pfp-photo'];
       
@@ -344,6 +364,9 @@ class UserController extends AbstractController {
 
         return self::prepareResponse(json_encode($content), "application/json");
       }
+
+      // Delete old profile picture if it exists
+      $deleteOldProfilePicture($user_id);
     }
     elseif(
       // Check if the user chose an avatar
@@ -360,13 +383,9 @@ class UserController extends AbstractController {
 
         return self::prepareResponse(json_encode($content), "application/json");
       }
-    }
 
-    // Check if user has a previous/older profile photo folder: Delete it
-    $prev_photo_id = $user_model -> getUserDetails($user_id)['photo-id'];
-    if(!is_null($prev_photo_id) && file_exists("$profile_imgs_dir/user-pfp-$prev_photo_id.gif")) {
-      // Delete it
-      unlink("$profile_imgs_dir/user-pfp-$prev_photo_id.gif");
+      // Delete old profile picture if it exists
+      $deleteOldProfilePicture($user_id);
     }
 
     /* ----------------------------------------------------------

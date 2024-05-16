@@ -84,4 +84,3 @@ class AbstractController {
     return $content;
   }
 }
-

@@ -30,8 +30,8 @@
 
     <section id="form-section">
       <!-- Error message -->
-      <div class="error-msg fa-fade <?php echo !isset($form_error_msg) ? 'hidden' : '' ?>">
-        <p class="msg">
+      <div class="error-msg fa-fade <?php echo !isset($form_error_msg) || empty($form_error_msg) ? 'hidden' : '' ?>">
+        <p class="msg mb-0">
           <!-- Error message goes here -->
           <?php insert($form_error_msg); ?>
         </p>

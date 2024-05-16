@@ -56,9 +56,9 @@ main #form-section .error-msg {
   align-items: center;
   justify-content: space-between;
   background-color: var(--theme-error);
-  margin: .4rem 0;
+  margin: 0.4rem 0;
   color: var(--colour-white);
-  padding: .8rem;
+  padding: 0.8rem;
   font-family: 'Rubik';
   border-radius: 2px;
   opacity: .75;
